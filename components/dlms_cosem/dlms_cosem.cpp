@@ -332,7 +332,7 @@ void DlmsCosemComponent::loop() {
         //        ESP_LOGD(TAG, "DLSM parser fn result == DLMS_ERROR_CODE_OK");
 
       } else {
-        ESP_LOGE(TAG, "DLMS parser fn error %d %s", this->dlms_error_to_string(parse_ret));
+        ESP_LOGE(TAG, "DLMS parser fn error %d %s", parse_ret, this->dlms_error_to_string(parse_ret));
 
         // if not - just move forward
         if (reading_state_.mission_critical) {
